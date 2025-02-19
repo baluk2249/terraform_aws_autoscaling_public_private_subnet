@@ -1,0 +1,1 @@
+# terraform_aws_autoscaling_public_private_subnet
