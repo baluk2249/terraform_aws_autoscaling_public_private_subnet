@@ -138,6 +138,5 @@ The following outputs are provided:
 - `public_subnet_ids`: The IDs of the public subnets
 - `private_subnet_ids`: The IDs of the private subnets
 - `web_private_asg_id`: The ID of the security group for the web instances
-- `instances`: The IDs of the instances
 - `web_asg_id`: The ID of the web ASG
 - `web_url`: The URL of the web instances
