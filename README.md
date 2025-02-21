@@ -97,17 +97,9 @@ The listener defines the port and protocol for the ALB to listen for incoming tr
    cd terraform_aws_autoscaling_public_private_subnet
 
 2. **Update the backend configuration:**
+
     Open the main.tf file and update the backend "s3" block with your S3 bucket name and DynamoDB table name for state locking.
 
-   `
-   terraform {
-  backend "s3" {
-    bucket         = "your-s3-bucket-name"
-    key            = "path/to/your/terraform.tfstate"
-    region         = "your-region"
-    dynamodb_table = "your-dynamodb-table-name"
-     }
-    }`
 
 3. **Initialize Terraform:**
 
@@ -153,3 +145,4 @@ The following outputs are provided:
 - `web_private_asg_id`: The ID of the security group for the web instances
 - `web_asg_id`: The ID of the web ASG
 - `web_url`: The URL of the web instances
+
