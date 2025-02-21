@@ -6,10 +6,10 @@ terraform {
         }
     }
     backend "s3" {
-    bucket = var.backend_bucket
-    key    = var.backend_key
-    region = var.backend_region
-    dynamodb_table = var.backend_dyn_table
+    bucket = "demo-trout-terraform-state" 
+    key    = "terraform.tfstate"
+    region = "us-east-1"
+    dynamodb_table = "demo-tryout-terraform-state"
     encrypt = true  
     }
 }
@@ -46,4 +46,3 @@ module "autoscaling" {
     public_subnet_ids = module.vpc.public_subnet_ids
   
 }
-
