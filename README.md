@@ -99,7 +99,7 @@ The listener defines the port and protocol for the ALB to listen for incoming tr
 2. **Update the backend configuration:**
     Open the main.tf file and update the backend "s3" block with your S3 bucket name and DynamoDB table name for state locking.
 
-   ```sh
+   `
    terraform {
   backend "s3" {
     bucket         = "your-s3-bucket-name"
@@ -107,7 +107,7 @@ The listener defines the port and protocol for the ALB to listen for incoming tr
     region         = "your-region"
     dynamodb_table = "your-dynamodb-table-name"
      }
-    }
+    }`
 
 3. **Initialize Terraform:**
 
