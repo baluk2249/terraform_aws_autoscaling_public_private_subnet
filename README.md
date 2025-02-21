@@ -96,19 +96,32 @@ The listener defines the port and protocol for the ALB to listen for incoming tr
    git clone https://github.com/yourusername/terraform_aws_autoscaling_public_private_subnet.git
    cd terraform_aws_autoscaling_public_private_subnet
 
-2. **Initialize Terraform:**
+2. **Update the backend configuration:**
+    Open the main.tf file and update the backend "s3" block with your S3 bucket name and DynamoDB table name for state locking.
+
+   ```sh
+   terraform {
+  backend "s3" {
+    bucket         = "your-s3-bucket-name"
+    key            = "path/to/your/terraform.tfstate"
+    region         = "your-region"
+    dynamodb_table = "your-dynamodb-table-name"
+     }
+    }
+
+3. **Initialize Terraform:**
 
    ```sh
    terraform init
-3. **Review the Terraform plan:**
+4. **Review the Terraform plan:**
 
    ```sh
    terraform plan
-4. **Apply the Terraform configuration:**
+5. **Apply the Terraform configuration:**
 
    ```sh
    terraform apply
-5. **Outputs:**
+6. **Outputs:**
 
    ```sh
    After the apply completes, Terraform will output the DNS name of the ALB and other useful information.
