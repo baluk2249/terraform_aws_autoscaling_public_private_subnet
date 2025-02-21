@@ -6,10 +6,10 @@ terraform {
         }
     }
     backend "s3" {
-    bucket = "demo-trout-terraform-state" 
-    key    = "terraform.tfstate"
-    region = "us-east-1"
-    dynamodb_table = "demo-tryout-terraform-state"
+    bucket = var.backend_bucket
+    key    = var.backend_key
+    region = var.backend_region
+    dynamodb_table = var.backend_dyn_table
     encrypt = true  
     }
 }

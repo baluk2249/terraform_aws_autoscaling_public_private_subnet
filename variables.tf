@@ -5,6 +5,33 @@ variable "region" {
   
 }
 
+variable "backend_bucket" {
+  description = "The name of the S3 bucket to store the Terraform state"
+  type        = string
+  default = "demo-trout-terraform-state"
+  
+}
+
+variable "backend_key" {
+  description = "The name of the S3 key to store the Terraform state"
+  type        = string
+  default = "terraform.tfstate" 
+  
+}
+variable "backend_region" {
+  description = "The region of the S3 bucket"
+  type        = string
+  default = "us-east-1"
+  
+}
+
+variable "backend_dyn_table" {
+  description = "The name of the DynamoDB table to lock the Terraform state"
+  type        = string
+  default = "demo-tryout-terraform-state"
+  
+}
+
 variable "vpc_cidr" {
   description = "CIDR block for the VPC"
   type        = string
