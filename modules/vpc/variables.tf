@@ -21,3 +21,23 @@ variable "private_subnet_cidrs" {
   
 }
 
+
+
+variable "web_sg_cidr_blocks" {
+  description = "CIDR blocks to allow HTTP access"
+  type        = list(string)
+  
+}
+
+variable "web_asg_22_cidr_blocks" {
+  description = "CIDR blocks to allow HTTP access"
+  type        = list(string)
+  
+}
+
+variable "web_asg_80_cidr_blocks" {
+  description = "CIDR blocks to allow HTTP access"
+  type        = list(string)
+  
+}
+
